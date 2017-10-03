@@ -1,0 +1,22 @@
+Creating a Variable
+Practice makes perfect! Let's get started by creating a variable and giving it a value.
+
+Instructions
+Declare a variable, $myName, and give it your name as a string.
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type='text/css' rel='stylesheet' href='style.css'/>
+		<title>PHP FTW!</title>
+	</head>
+	<body>
+        <!-- Write your PHP code below!-->
+        <?php 
+        $myName = "Hannah";
+        ?>
+        <p>
+            
+        </p>   
+	</body>
+</html>
