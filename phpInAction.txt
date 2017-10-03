@@ -1,0 +1,57 @@
+PHP in Action
+PHP is a programming language that can do all sorts of things: evaluate form data sent from a browser, build custom web content to serve the browser, talk to a database, and even send and receive cookies (little packets of data that your browser uses to remember things, like if you're logged in to Codecademy).
+
+Check out the code in the editor. Looks familiar, doesn't it? That's because a lot of it is regular old HTML! The PHP code is written in the <?php and ?> . See how it generates numbers, creates lists, and adds text directly to your webpage?
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link type='text/css' rel='stylesheet' href='style.css'/>
+    <title>PHP!</title>
+  </head>
+  <body>
+    <img src="http://i1061.photobucket.com/albums/t480/ericqweinstein/php-logo_zps408c82d7.png"/>
+    <div class="header"><h1>
+      <?php
+      $welcome = "Let's get started with PHP!";
+      echo $welcome;
+      ?>
+    </h1></div>
+    <p><strong>Generate a list:</strong>
+      <?php
+      for ($number = 1; $number <= 10; $number++) {
+        if ($number <= 9) {
+            echo $number . ", ";
+        } else {
+            echo $number . "!";
+        }
+      }; ?>
+    </p>
+    <p><strong>Things you can do:</strong>
+      <?php
+        $things = array("Talk to databases",
+        "Send cookies", "Evaluate form data",
+        "Build dynamic webpages");
+        foreach ($things as $thing) {
+            echo "<li>$thing</li>";
+        }
+        
+        unset($thing);
+      ?>
+    </p>
+    <p><strong>This jumbled sentence will change every time you click Submit!<strong></p>
+    <p>
+      <?php
+        $words = array("the ", "quick ", "brown ", "fox ",
+        "jumped ", "over ", "the ", "lazy ", "dog ");
+        shuffle($words);
+        foreach ($words as $word) {
+            echo $word;
+        };
+        
+        unset($word);
+      ?>
+    </p>
+  </body>
+</html>
