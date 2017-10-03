@@ -1,0 +1,26 @@
+PHP and HTML
+PHP code can be written right into your HTML, like this:
+
+<body>
+  <p>
+
+    <?php
+      echo "I'm learning PHP!";
+    ?>
+
+  </p>
+</body>
+Your PHP code goes inside the <?php and ?> delimiters. Here we use the function echo to output I'm learning PHP!. We also end the line with a semicolon.
+
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+        <p>
+          <?php
+            echo "Hannah!";
+          ?>
+        </p>   
+	</body>
+</html>
